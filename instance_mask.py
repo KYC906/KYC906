@@ -16,7 +16,7 @@ def preprocessing_instance_mask(
 
     for idx, color in enumerate(unique_colors):
         mask = np.all(instance_mask == color, axis=-1)
-        gray_mask[mask] = idx + 1
+        gray_mask[mask] = idx + 4
 
     return gray_mask, num_classes
 
